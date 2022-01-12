@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
  </head>
  <body>
    <div class="container-fluid p-3 bg-dark text-light text-center">
@@ -30,8 +30,37 @@
           </div>
        </div>
     </div>
-      
-    <div class="container mt-4">
+    <div class="container-fluid tabela-top-100">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Logotipo</th>
+            <th scope="col">Valor Atual</th>
+            <th scope="col">Últimas 24h</th>
+            <th scope="col">Favoritos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <div class ="tabela">
+            <tr class="fila">
+              <th id="id"></th>
+              <td id="nome"></td>
+              <td ><img id="logo-coin"></td>
+              <td id="valor"></td>
+              <td id="24h"></td>
+              <td id="favoritos"><button>Favorito</button></td>
+            </tr>
+            
+          </div>
+          
+          
+        </tbody>
+      </table>
+
+    </div>
+   <!-- <div class="container mt-4">
       <div class="row">
         <div class="col-sm-4">
           <h3>Column 1</h3>
@@ -50,8 +79,8 @@
         </div>
       </div>
     </div>
-    
+  -->
 </body>
-<script src="js/script.js"></script>
+<script src="../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>

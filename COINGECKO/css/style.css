@@ -1,1 +1,14 @@
-
+.tabela-top-100{
+    width: 80% !important;
+    margin-top: 5%;
+    color:white;
+}
+body{
+    background-color: #28244c;
+}
+th, td{
+    color:white;
+}
+#logo-coin{
+    width: 35px ;
+}
