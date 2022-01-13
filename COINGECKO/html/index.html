@@ -30,27 +30,32 @@
           </div>
        </div>
     </div>
-    <div class="container-fluid tabela-top-100">
-      <table class="table">
+    <div class="container-fluid tabela-top-100" >
+      <table class="table" >
         <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr id="header-tr">
+            <th id="id-header"scope="col">#</th>
+            <th scope="col"></th>
             <th scope="col">Nome</th>
-            <th scope="col">Logotipo</th>
-            <th scope="col">Valor Atual</th>
-            <th scope="col">Últimas 24h</th>
-            <th scope="col">Favoritos</th>
+            
+            <th id="valor-header"scope="col">Valor Atual</th>
+            <th id="h24-header"scope="col">Últimas 24h</th>
+            <th id="market-cap-header"scope="col">Market Cap</th>
+            <th id="favoritos-header"scope="col">Favoritos</th>
           </tr>
         </thead>
         <tbody>
           <div class ="tabela">
-            <tr class="fila">
-              <th id="id"></th>
-              <td id="nome"></td>
-              <td ><img id="logo-coin"></td>
-              <td id="valor"></td>
-              <td id="24h"></td>
-              <td id="favoritos"><button>Favorito</button></td>
+            <tr class="fila" id="body-tr">
+              <td style="width: 1%;" id="id"></td>
+              <td style="width: 1%;" id="logo-coin-div"><img id="logo-coin"></td>
+              <td style="width: 10%" id="nome"></td>
+
+              <td style="width: 1%"id="valor"></td>
+
+              <td style="width: 6%"id="h24"></td>
+              <td style="width: 6%"id="market-cap"></td>
+              <td style="width: 6%"id="favoritos"><button>Favorito</button></td>
             </tr>
             
           </div>

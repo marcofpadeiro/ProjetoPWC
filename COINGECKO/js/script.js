@@ -14,9 +14,17 @@ $.ajax({
         $('#id', clone).text(result.market_cap_rank);
         $('#nome', clone).text(result.name);
         $('#logo-coin', clone).attr('src', result.image);
-        
-        $('#valor', clone).text(result.current_price + '€');
-        $('#24h', clone).text(result.price_change_24h + '€');
+        if(result.current_price > 1){
+            $('#valor', clone).text(result.current_price.toFixed(2) + '€');
+        }
+        else{
+
+            $('#valor', clone).text(result.current_price + '€');
+        }   
+        var color = result.price_change_24h < 0 ? 'red' : 'rgb(21, 223, 14)';
+        $('#h24', clone).css('color', color);
+        $('#h24', clone).text(result.price_change_percentage_24h.toFixed(2) + '%');
+        $('#market-cap', clone).text(result.market_cap.toLocaleString() + '€');
         $('#favoritos', clone).attr('src', "a");
         $('tbody').append(clone);
     })

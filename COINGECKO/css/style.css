@@ -1,14 +1,42 @@
 .tabela-top-100{
-    width: 80% !important;
-    margin-top: 5%;
-    color:white;
+    width: 75% !important;
+    margin-top: 8%;
+    border-radius: 15px;
+    margin-right: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.068); 
+    background-color: #27225a;
 }
 body{
     background-color: #28244c;
 }
-th, td{
+
+#body-tr{
+    border-radius: 15px;
+}
+#body-tr:hover{
+    background-color: #433e7a;
+}
+td{
     color:white;
+    border-top: 1px solid rgba(255, 0, 0, 0.459);
 }
 #logo-coin{
-    width: 35px ;
+    width: 25px;
 }
+#id, #logo-coin-div, #favoritos, #favoritos-header, #id-header{
+    text-align: center;
+}
+#h24{
+
+    padding-right: 32px;
+}
+#valor, #h24, #valor-header, #h24-header, #market-cap, #market-cap-header{
+    text-align: right;
+    
+}
+th{
+    color: white;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
