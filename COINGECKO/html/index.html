@@ -4,6 +4,9 @@
    <link rel="icon" type="image/png" href="../img/logonotext.png" >
     <title>FoxList</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet"
+    href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,80 +14,152 @@
     <link rel="stylesheet" href="../css/style.css">
  </head>
  <body>
-   <div class="container-fluid p-3 bg-dark text-light text-center">
-      <div class="row">
-         <div class="col-sm-2">
-           <img src="../img/Logo.png" style="width: 100px;">
-         </div>
-         <div class="col-sm-2">
-           <h3>Favoritos</h3>
-           
-         </div>
-         <div class="col-sm-2">
-           <h3>Extra</h3>        
-           
-         </div>
-         <div class="col-sm-2">
-            <input type="text">       
-            
-          </div>
-       </div>
-    </div>
-    <div class="container-fluid tabela-top-100" >
-      <table class="table" >
-        <thead>
-          <tr id="header-tr">
-            <th id="id-header"scope="col">#</th>
-            <th scope="col"></th>
-            <th scope="col">Nome</th>
-            
-            <th id="valor-header"scope="col">Valor Atual</th>
-            <th id="h24-header"scope="col">Últimas 24h</th>
-            <th id="market-cap-header"scope="col">Market Cap</th>
-            <th id="favoritos-header"scope="col">Favoritos</th>
-          </tr>
-        </thead>
-        <tbody>
-          <div class ="tabela">
-            <tr class="fila" id="body-tr">
-              <td style="width: 1%;" id="id"></td>
-              <td style="width: 1%;" id="logo-coin-div"><img id="logo-coin"></td>
-              <td style="width: 10%" id="nome"></td>
-
-              <td style="width: 1%"id="valor"></td>
-
-              <td style="width: 6%"id="h24"></td>
-              <td style="width: 6%"id="market-cap"></td>
-              <td style="width: 6%"id="favoritos"><button>Favorito</button></td>
-            </tr>
-            
-          </div>
-          
-          
-        </tbody>
-      </table>
-
-    </div>
-   <!-- <div class="container mt-4">
-      <div class="row">
-        <div class="col-sm-4">
-          <h3>Column 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
-        <div class="col-sm-4">
-          <h3>Column 3</h3>        
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div>
+  <nav class="navbar navbar-light bg-dark">
+    <div class="container-fluid">
+      <img src="../img/Logo.png" class="img-responsive logo">
+      </button>
+     
+        <form class="d-flex">
+          <input type="text" placeholder="Pesquisa.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        
+        </form>
       </div>
     </div>
-  -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 "> 
+        <div class="row">
+          <div class="top3-titulo">Top Raising</div>
+        </div>
+        <div class="row top3">
+          <div class="caixas ">
+           <div class="row">
+             <div class="col-2">
+             <div><img id="">img</div> 
+
+             </div>
+             <div class="col">
+               <div>Nome</div>
+            </div>
+
+           </div>
+           <div class="row">
+            <div class="col">
+              <diV>
+                Valor atual
+              </diV>
+
+            </div>
+            <div class="col">
+              <div>
+                percetagem
+              </div>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+        <div class="row top3">
+          <div class="caixas ">
+           <div class="row">
+             <div class="col-2">
+             <div><img id="">img</div> 
+
+             </div>
+             <div class="col">
+               <div>Nome</div>
+            </div>
+
+           </div>
+           <div class="row">
+            <div class="col">
+              <diV>
+                Valor atual
+              </diV>
+
+            </div>
+            <div class="col">
+              <div>
+                percetagem
+              </div>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+        <div class="row top3">
+          <div class="caixas ">
+           <div class="row">
+             <div class="col-2">
+             <div><img id="">img</div> 
+
+             </div>
+             <div class="col">
+               <div>Nome</div>
+            </div>
+
+           </div>
+           <div class="row">
+            <div class="col">
+              <diV>
+                Valor atual
+              </diV>
+
+            </div>
+            <div class="col">
+              <div>
+                percetagem
+              </div>
+
+            </div>
+
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        
+        <div class="container-fluid tabela-top-100" >
+        <div id="theader">
+          <div class="row" style="line-height: 350%; border-bottom:2px solid rgba(221, 221, 221, 0.89);">
+            <div class="col-1 header-tabela">#</div>
+            <div class="col-sl header-tabela">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-2 header-tabela" id="nome-header">Nome</div>
+            <div class="col-2 header-tabela" id="valor-header">Valor atual</div>
+            <div class="col-2 header-tabela" id="h24-header">Ultimas 24h</div>
+            <div class="col header-tabela" id="volume-header">Volume Total</div>
+            <div class="col-2 header-tabela" id="market-header">Market Cap</div>
+         
+            <div class="col-1 header-tabela">Favoritos</div>
+          </div>
+          </div>
+          <div id="tbody">
+          <div class="row" id="fila" style="line-height: 300%; border-bottom:1px solid rgba(255, 255, 255, 0.342); ">
+            <div class="col-1 corpo-tabela" id="id" style="width: 50%;"></div>
+            <div class="col-sl corpo-tabela" id="logo-coin-div"><img id="logo-coin"></div>
+            <div class="col-2 corpo-tabela" id="nome" ></div>
+            <div class="col-2 corpo-tabela" id="valor" ></div>
+            <div class="col-2 corpo-tabela" id="h24" ></div>
+            <div class="col corpo-tabela"  id="volume-total"></div>
+            <div class="col-2 corpo-tabela" id="market-cap"  ></div>
+          
+            <div class="col-1 corpo-tabela" id="favoritos"><img src="../img/starnocolor.png" style="width:25%"></div>
+          </div>
+          </div>
+      
+         
+    
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </body>
 <script src="../js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

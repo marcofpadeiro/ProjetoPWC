@@ -1,42 +1,76 @@
+.logo {
+    width: 150px;
+}
+
+
 .tabela-top-100{
-    width: 75% !important;
-    margin-top: 8%;
+    margin-top: 5%;
     border-radius: 15px;
     margin-right: 20px;
-    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.068); 
+    border:1px solid rgba(255, 255, 255, 0.116);
     background-color: #27225a;
 }
 body{
     background-color: #28244c;
 }
 
-#body-tr{
-    border-radius: 15px;
-}
-#body-tr:hover{
-    background-color: #433e7a;
-}
-td{
-    color:white;
-    border-top: 1px solid rgba(255, 0, 0, 0.459);
-}
 #logo-coin{
     width: 25px;
 }
-#id, #logo-coin-div, #favoritos, #favoritos-header, #id-header{
+
+
+.header-tabela{
+color: rgba(221, 221, 221, 0.89) !important;
+text-align: center;
+font-weight: bold;
+
+}
+.corpo-tabela {
+    color:rgba(221, 221, 221, 0.89);
     text-align: center;
 }
-#h24{
-
-    padding-right: 32px;
+#nome, #nome-header {
+    text-align: left;
 }
-#valor, #h24, #valor-header, #h24-header, #market-cap, #market-cap-header{
+#valor, #h24, #market-cap,#valor-header, #h24-header, #market-header,#volume-header,#volume-total {
     text-align: right;
-    
 }
-th{
+.caixas {
+    padding-left: 3%;
+    height:150px;
+    background-color:white;
+    border-radius: 15px;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top3 {
+    padding-top: 15%;
+}
+
+.top3-titulo {
+    font-size: 150%;
+    margin-top: 16%;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+}
+.d-flex input[type=text] {
+    padding: 10px;
+    font-size: 15px;
+    border:none;
+    width: 60%;
+    background: #f1f1f1;
+  }
+  .d-flex button {
+    width: 20%;
+    padding: 10px;
+    background: #6e6e6e91;
     color: white;
-    border-top: none !important;
-    border-bottom: none !important;
-}
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+
 
