@@ -17,7 +17,9 @@ body{
 #logo-coin{
     width: 25px;
 }
-
+#logo-coin-top{
+    width: 50px;
+}
 
 .header-tabela{
 color: rgba(221, 221, 221, 0.89) !important;
