@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
- </head>
- <body>
-   
+<head>
+  <link rel="icon" type="image/png" href="../img/logonotext.png" >
+  <title>FoxList</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-light" >
+    <div class="container-fluid">
+      <img src="../img/foxwhite.png" class="img-responsive logo">
+      <h2 class="selecionar"><a href="index.html">Paginal Principal</a></h2>
+      <h2 class="selecionar"><a href="">Favoritos</a></h2>
+        <input class="pesquisa" type="text" placeholder="Pesquisa.." name="search">
+    </div>
+  </nav>
+  <div class="container-fluid caixa-detalhes">
+     <div class="row">
+        <div class="col-3">
+         <div class="row">
+         <img src="../img/starnocolor.png" style="width:8%; margin-left:92%;"> 
+         </div>
+         <div class="row">
+            <img style="width: 100%;" id="logo-detalhes">
+         </div>
+         <div class="row" >
+            <div id="nome-detalhes"></div>
+         </div>
+        </div>
+        <div class="col-1">
+         a
+        </div>
+        <div class="col">
+           a
+      </div>
+     </div>
+  </div>
 </body>
-<script src="js/script.js"></script>
+<script src="../js/script_detalhes.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>

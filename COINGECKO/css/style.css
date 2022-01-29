@@ -2,8 +2,6 @@
     margin-left: 15px;
     width: 235px;
 }
-
-
 .tabela-top-100{
     border-radius: 15px;
     margin-right: 20px;
@@ -13,19 +11,21 @@
 body{
     background-color: #081633;
 }
-
 #logo-coin{
     width: 25px;
 }
 #logo-coin-top{
     width: 30px;
 }
-
+#fila:hover {
+background-color: #858585b6;
+cursor:pointer;
+}
 .header-tabela{
 color: rgba(221, 221, 221, 0.89) !important;
 text-align: center;
 font-weight: bold;
-
+font-size: 14pt;
 }
 .corpo-tabela {
     color:rgba(221, 221, 221, 0.89);
@@ -38,23 +38,20 @@ font-weight: bold;
     text-align: right;
 }
 .caixas {
-    
     height:150px;
     background-color:#eaecef;
     border-radius: 15px;
-    width:70%;
+    width:75%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8%;
 }
-
-.top3-espaco{
+.top4-espaco{
     border-radius: 15px;
     width:95%;
     margin-left: 15px;
 }
-
-.top3-titulo {
+.top4-titulo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 150%;
     margin-top: 10%;
@@ -63,29 +60,29 @@ font-weight: bold;
     margin-bottom: 10%;
     color:white;
 }
-#nome-top, #valor-top, #h24-top{
+#nome-top, #valor-top-atual, #h24-top{
     color: black;
     margin-bottom: auto;
     margin-top: auto;
     font-weight: bold;
     font-size: 85%;
 }
-#valor-top{
+#valor-top-atual{
     text-align: center;
 }
 #rank-atual{
-    
     text-align: center !important; 
-    margin-top:5%; 
+    padding-top:7%; 
+    padding-bottom:auto;
     margin-right:5%; 
     font-weight: bold;
-    color: #09062e;
+    color: black;
     font-size: 85%;
+    border-left: 1px solid rgba(0, 0, 0, 0.212);
 }
 .navbar {
     height: 150px;
 }
-
 .pesquisa {
     padding: 6px;
     font-size: 15px;
@@ -94,7 +91,35 @@ font-weight: bold;
     background: #f1f1f1;
     border-radius: 15px;
   }
- 
-  
-
-
+.selecionar{
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  .selecionar:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .selecionar:hover:after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+}
+  h2 {
+      color:#eaecef;
+  }
+  a:visited, a:hover{
+      text-decoration: none;
+      color: white;
+  }
+  .caixa-detalhes {
+      border:1px solid red;
+      width:85%;
+  }
