@@ -1,24 +1,24 @@
 .logo {
-    width: 150px;
+    margin-left: 15px;
+    width: 235px;
 }
 
 
 .tabela-top-100{
-    margin-top: 5%;
     border-radius: 15px;
     margin-right: 20px;
     border:1px solid rgba(255, 255, 255, 0.116);
-    background-color: #27225a;
+    background-color: #142749;
 }
 body{
-    background-color: #28244c;
+    background-color: #081633;
 }
 
 #logo-coin{
     width: 25px;
 }
 #logo-coin-top{
-    width: 45px;
+    width: 30px;
 }
 
 .header-tabela{
@@ -40,55 +40,61 @@ font-weight: bold;
 .caixas {
     
     height:150px;
-    background-color:#27225a;
+    background-color:#eaecef;
     border-radius: 15px;
-    width:80%;
+    width:70%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
-.top3 {
-    padding-top: 15%;
+
+.top3-espaco{
+    border-radius: 15px;
+    width:95%;
+    margin-left: 15px;
 }
 
 .top3-titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 150%;
-    margin-top: 16%;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10%;
     color:white;
 }
 #nome-top, #valor-top, #h24-top{
-    color: white;
+    color: black;
     margin-bottom: auto;
     margin-top: auto;
+    font-weight: bold;
+    font-size: 85%;
 }
 #valor-top{
     text-align: center;
 }
 #rank-atual{
     
-    text-align: center !important; margin-top:3%; border-left: 1px solid rgba(255, 255, 255, 0.199);
+    text-align: center !important; 
+    margin-top:5%; 
+    margin-right:5%; 
     font-weight: bold;
     color: #09062e;
+    font-size: 85%;
+}
+.navbar {
+    height: 150px;
 }
 
-.d-flex input[type=text] {
-    padding: 10px;
+.pesquisa {
+    padding: 6px;
     font-size: 15px;
     border:none;
-    width: 60%;
+    width:15%;
     background: #f1f1f1;
+    border-radius: 15px;
   }
-  .d-flex button {
-    width: 20%;
-    padding: 10px;
-    background: #6e6e6e91;
-    color: white;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-  }
+ 
   
 
 

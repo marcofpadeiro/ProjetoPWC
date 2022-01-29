@@ -19,7 +19,7 @@ $.ajax({
         i++;
 
     })
-    mostra_top_3(coins);
+    mostra_top_4(coins);
     mostra_tabela(100, coins);
     
     
@@ -44,17 +44,17 @@ function mostra_tabela(numero, coins){
         $('#tbody').append(clone[i]);
     }
 }
-function mostra_top_3(coins){
+function mostra_top_4(coins){
     var cloneCaixa = $('.caixas').clone();
     var top_moeda = top_moedas(coins);
     var clone = [];
     $('.top3').empty(); 
-    for(var i = 0; i < 3; i++){
+    for(var i = 0; i < 4; i++){
         clone[i] = cloneCaixa.clone();
         $('#logo-coin-top', clone[i]).attr('src', top_moeda[i].logo);
         $('#nome-top', clone[i]).text(top_moeda[i].nome);
         $('#valor-top', clone[i]).text(top_moeda[i].valor + '€');
-        var color = top_moeda[i].h24 < 0 ? 'red' : 'rgb(21, 223, 14)';
+        var color = top_moeda[i].h24 < 0 ? 'red' : 'rgb(6, 167, 54)'; 
         $('#h24-top', clone[i]).css('color', color);
         $('#h24-top', clone[i]).text('+' + top_moeda[i].h24.toFixed(2) + '%');
         $('#ranking-top', clone[i]).text('#' + top_moeda[i].id);
@@ -66,22 +66,29 @@ function top_moedas(coins){
     top[0] = coins[0];
     top[1] = coins[0];
     top[2] = coins[0];
-    for(var i = 3; i < 100; i++){
+    top[3] = coins[0];
+    for(var i = 4; i < 100; i++){
         if(coins[i].h24 > top[0].h24){
+            top[3] = top[2];
             top[2] = top[1];
             top[1] = top[0];
             top[0] = coins[i];
         } else if(coins[i].h24 > top[1].h24){
+            top[3] = top[2];
             top[2] = top[1];
             top[1] = coins[i];
         } else if(coins[i].h24 > top[2].h24){
+            top[3] = top[2];
             top[2] = coins[i];
-        }
+        } else if(coins[i].h24 > top[3].h24){
+            top[3] = coins[i];
+        } 
     }
     return {
         0:top[0],
         1:top[1],
-        2:top[2] 
+        2:top[2],
+        3:top[3] 
     };
    
 

@@ -12,36 +12,37 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <nav class="navbar navbar-light bg-dark" >
+  <nav class="navbar navbar-light" >
     <div class="container-fluid">
-      <img src="../img/Logo.png" class="img-responsive logo">
-      <form class="d-flex">
-        <input type="text" placeholder="Pesquisa.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+      <img src="../img/foxwhite.png" class="img-responsive logo">
+      
+        <input class="pesquisa" type="text" placeholder="Pesquisa.." name="search">
+    
+    
     </div>
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-3"> 
-        <div class="row">
+      <div class="col-2"> 
+        <div class="row top3-espaco" style="background-color: #233042;">
           <div class="top3-titulo">Top Rising</div>
-        </div>
+        
         <div class="row top3" >
           <div class="caixas">
             <div class="row w-100 h-50" style="border-top-right-radius: 15px; border-top-left-radius: 15px; margin-left: 0%;">
               <div class="col-2" style="margin-bottom: auto; margin-top: auto;"><img id="logo-coin-top"></div> 
               <div class="col" id="nome-top"></div>
               <div class="col-3" id="rank-atual" >
-                Atual
+                Rank
                 <div id="ranking-top"></div>
               </div>
             </div>
-            <div class="row w-100 h-50" style="border-top: 1px solid rgba(255, 255, 255, 0.199); border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; margin-left: 0%;">
+            <div class="row w-100 h-50" style="border-top: 1px solid rgba(0, 0, 0, 0.212); border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; margin-left: 0%;">
               <div class="col" id="valor-top"></div>
               <div class="col" id="h24-top"></div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <div class="col">
@@ -61,7 +62,7 @@
           </div>
           </div>
           <div id="tbody">
-          <div class="row" id="fila" style="line-height: 300%; border-top:1px solid rgba(255, 255, 255, 0.199); ">
+          <div class="row" id="fila" style="line-height: 300%; border-top:1px solid rgba(255, 255, 255, 0.100); ">
             <div class="col-1 corpo-tabela" id="id" style="width: 50%;"></div>
             <div class="col-sl corpo-tabela" id="logo-coin-div"><img id="logo-coin"></div>
             <div class="col-2 corpo-tabela" id="nome" ></div>
