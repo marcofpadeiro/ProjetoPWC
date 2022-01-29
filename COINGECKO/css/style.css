@@ -18,7 +18,7 @@ body{
     width: 25px;
 }
 #logo-coin-top{
-    width: 50px;
+    width: 45px;
 }
 
 .header-tabela{
@@ -38,13 +38,14 @@ font-weight: bold;
     text-align: right;
 }
 .caixas {
-    padding-left: 3%;
+    
     height:150px;
-    background-color:white;
+    background-color:#27225a;
     border-radius: 15px;
     width:80%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10%;
 }
 .top3 {
     padding-top: 15%;
@@ -57,6 +58,21 @@ font-weight: bold;
     margin-right: auto;
     color:white;
 }
+#nome-top, #valor-top, #h24-top{
+    color: white;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+#valor-top{
+    text-align: center;
+}
+#rank-atual{
+    
+    text-align: center !important; margin-top:3%; border-left: 1px solid rgba(255, 255, 255, 0.199);
+    font-weight: bold;
+    color: #09062e;
+}
+
 .d-flex input[type=text] {
     padding: 10px;
     font-size: 15px;

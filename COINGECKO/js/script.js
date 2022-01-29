@@ -1,96 +1,91 @@
 'use strict';
-
-var top_id=[0,0,0,0,0,0];
-var coins = [];
-var i = 0;
-
-
 $.ajax({
     method: "GET",
     url: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h"
 }).done(function(res){
-    $.each(res, function(index, result = [i]){
+    var coins = [];
+    var i = 0;
+    $.each(res, function(index, result){
         coins[i] = {
             id: result.market_cap_rank,
             nome: result.name,
             logo: result.image,
             valor: result.current_price > 1 ? result.current_price.toFixed(2) : result.current_price,
-            h24: result.price_change_percentage_24h.toFixed(2),
+            h24: result.price_change_percentage_24h,
             marketcap: result.market_cap.toLocaleString(),
             volume: result.total_volume.toLocaleString(),
-            fav: 0
+            fav: true
         };
-        top_id=top3(coins[i].h24, coins[i].id, top_id[0], top_id[1], top_id[2], top_id[3], top_id[4], top_id[5]);
         i++;
-        
-    })
-    mostra_top_3(3, top_id, coins);
-    mostra_tabela(100);
-    
-    console.log(top_id);
-})
 
-function mostra_tabela(numero){
+    })
+    mostra_top_3(coins);
+    mostra_tabela(100, coins);
+    
+    
+})
+function mostra_tabela(numero, coins){
     var cloneFila = $('#fila').clone(); 
+    var clone = [];
     $('#tbody').empty();
-    for(i = 0; i < numero; i++){
-        var clone = cloneFila.clone();
-        $('#id', clone).text(coins[i].id);
-        $('#nome', clone).text(coins[i].nome);
-        $('#logo-coin', clone).attr('src', coins[i].logo);
-        $('#valor', clone).text(coins[i].valor + '€');
+    for(var i = 0; i < numero; i++){
+        clone[i] = cloneFila.clone();
+        $('#id', clone[i]).text(coins[i].id);
+        $('#nome', clone[i]).text(coins[i].nome);
+        $('#logo-coin', clone[i]).attr('src', coins[i].logo);
+        $('#valor', clone[i]).text(coins[i].valor + '€');
         var color = coins[i].h24 < 0 ? 'red' : 'rgb(21, 223, 14)';
-        $('#h24', clone).css('color', color);
-        $('#h24', clone).text(coins[i].h24 + '%');
-        $('#market-cap', clone).text(coins[i].marketcap + '€');
-        $('#volume-total', clone).text(coins[i].volume + '€');
-        $('#fav', clone);
-        $('#tbody').append(clone);
+        $('#h24', clone[i]).css('color', color);
+        $('#h24', clone[i]).text(coins[i].h24.toFixed(2) + '%');
+        $('#market-cap', clone[i]).text(coins[i].marketcap + '€');
+        $('#volume-total', clone[i]).text(coins[i].volume + '€');
+        if(coins[i].fav == true){ $('#star', clone[i]).attr('src', "../img/starcolor.png"); }
+        else {$('#star', clone[i]).attr('src', "../img/starnocolor.png");}
+        $('#tbody').append(clone[i]);
     }
 }
-function mostra_top_3(numero, top3, coins){
+function mostra_top_3(coins){
     var cloneCaixa = $('.caixas').clone();
+    var top_moeda = top_moedas(coins);
+    var clone = [];
     $('.top3').empty(); 
-    for(i = 0; i < numero; i++){
-        var clone = cloneCaixa.clone();
-        $('#logo-coin-top', clone).attr('src', coins[top3[i] - 1].logo);
-        $('#nome-top', clone).text(coins[top3[i] - 1].nome);
-        $('#valor-top', clone).text(coins[top3[i] - 1].valor + '€');
-        var color = coins[i].h24 < 0 ? 'red' : 'rgb(21, 223, 14)';
-        $('#h24-top', clone).css('color', color);
-        $('#h24-top', clone).text(coins[top3[i] - 1].h24 + '%');
-        $('.top3').append(clone);
+    for(var i = 0; i < 3; i++){
+        clone[i] = cloneCaixa.clone();
+        $('#logo-coin-top', clone[i]).attr('src', top_moeda[i].logo);
+        $('#nome-top', clone[i]).text(top_moeda[i].nome);
+        $('#valor-top', clone[i]).text(top_moeda[i].valor + '€');
+        var color = top_moeda[i].h24 < 0 ? 'red' : 'rgb(21, 223, 14)';
+        $('#h24-top', clone[i]).css('color', color);
+        $('#h24-top', clone[i]).text('+' + top_moeda[i].h24.toFixed(2) + '%');
+        $('#ranking-top', clone[i]).text('#' + top_moeda[i].id);
+        $('.top3').append(clone[i]);
     }
 }
-function top3(price_change_24h ,id, id1, id2, id3, price1, price2, price3){
-    if (price_change_24h > price1)
-    {
-        price3=price2;
-        id3=id2;
-        price2=price1
-        id2=id1;
-        price1=price_change_24h;
-        id1=id;
-    } else if(price_change_24h > price2){
-        price3=price2;
-        id3=id2;
-        price2=price_change_24h;
-        id2=id;
-    }else if(price_change_24h > price3){
-        price3=price_change_24h;
-        id3=id;
+function top_moedas(coins){
+    var top = [];
+    top[0] = coins[0];
+    top[1] = coins[0];
+    top[2] = coins[0];
+    for(var i = 3; i < 100; i++){
+        if(coins[i].h24 > top[0].h24){
+            top[2] = top[1];
+            top[1] = top[0];
+            top[0] = coins[i];
+        } else if(coins[i].h24 > top[1].h24){
+            top[2] = top[1];
+            top[1] = coins[i];
+        } else if(coins[i].h24 > top[2].h24){
+            top[2] = coins[i];
+        }
     }
-   
     return {
-        0:id1,
-        1:id2,
-        2:id3,
-        3:price1,
-        4:price2,
-        5:price3
+        0:top[0],
+        1:top[1],
+        2:top[2] 
     };
    
 
 }
+
 
 

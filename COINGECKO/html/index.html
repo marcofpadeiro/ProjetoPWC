@@ -25,16 +25,20 @@
     <div class="row">
       <div class="col-3"> 
         <div class="row">
-          <div class="top3-titulo">Top Raising</div>
+          <div class="top3-titulo">Top Rising</div>
         </div>
-        <div class="row top3">
+        <div class="row top3" >
           <div class="caixas">
-            <div class="row">
-              <div class="col-2"><img id="logo-coin-top"></div> 
+            <div class="row w-100 h-50" style="border-top-right-radius: 15px; border-top-left-radius: 15px; margin-left: 0%;">
+              <div class="col-2" style="margin-bottom: auto; margin-top: auto;"><img id="logo-coin-top"></div> 
               <div class="col" id="nome-top"></div>
+              <div class="col-3" id="rank-atual" >
+                Atual
+                <div id="ranking-top"></div>
+              </div>
             </div>
-            <div class="row">
-              <div class="col" id="valor-top">l</div>
+            <div class="row w-100 h-50" style="border-top: 1px solid rgba(255, 255, 255, 0.199); border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; margin-left: 0%;">
+              <div class="col" id="valor-top"></div>
               <div class="col" id="h24-top"></div>
             </div>
           </div>
@@ -66,7 +70,7 @@
             <div class="col corpo-tabela"  id="volume-total"></div>
             <div class="col-2 corpo-tabela" id="market-cap"  ></div>
           
-            <div class="col-1 corpo-tabela" id="favoritos"><img src="../img/starnocolor.png" style="width:25%"></div>
+            <div class="col-1 corpo-tabela" id="favoritos"><img id="star" onclick="favButton()" src="../img/starnocolor.png" style="width:25%"></div>
           </div>
           </div>
       
