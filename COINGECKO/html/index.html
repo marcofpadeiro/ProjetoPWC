@@ -62,15 +62,15 @@
           </div>
           </div>
           <div id="tbody">
-          <div class="row" id="fila" value="0" style="line-height: 300%; border-top:1px solid rgba(255, 255, 255, 0.100);" onclick="redirecionaPaginaDetalhes($(this).val())">
-            <div class="col-1 corpo-tabela" id="id" style="width: 50%;"></div>
+          <div class="row" id="fila" value="0" style="line-height: 300%; border-top:1px solid rgba(255, 255, 255, 0.100);">
+            <div class="col-1 corpo-tabela" onclick="redirecionaPaginaDetalhes($(this).parent().val())" id="id" style="width: 50%;"></div>
             <div class="col-sl corpo-tabela" id="logo-coin-div"><img id="logo-coin"></div>
             <div class="col-2 corpo-tabela" id="nome" ></div>
             <div class="col-2 corpo-tabela" id="valor" ></div>
             <div class="col-2 corpo-tabela" id="h24" ></div>
             <div class="col corpo-tabela"  id="volume-total"></div>
             <div class="col-2 corpo-tabela" id="market-cap"  ></div>
-            <div class="col-1 corpo-tabela" id="favoritos"><img id="star" onclick="favButton()" src="../img/starnocolor.png" style="width:25%"></div>
+            <div class="col-1 corpo-tabela" onclick="CliqueStar($(this).parent().val(), $(this).children())"><img id="favoritos" src="../img/starnocolor.png" style="width:25%"></div>
           </div>
           </div>
         </div>
