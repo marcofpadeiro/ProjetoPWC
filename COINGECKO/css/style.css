@@ -1,6 +1,7 @@
 .logo {
-    margin-left: 15px;
-    width: 235px;
+    margin-left: 1.5vw;
+    width: 12.5vw;
+    user-select: none;
 }
 .tabela-top-100{
     border-radius: 15px;
@@ -12,14 +13,23 @@ body{
     background-color: #081633;
 }
 #logo-coin{
-    width: 25px;
+    width: 1vw;
 }
+
 #logo-coin-top{
-    width: 30px;
+    width: 1.5vw;
+}
+#fila {
+    line-height: 2.5vw;
+    border-top:1px solid rgba(255, 255, 255, 0.100);
 }
 #fila:hover {
 background-color: #858585b6;
 cursor:pointer;
+}
+.theader {
+    line-height: 3vw;
+    border-bottom:2px solid rgba(221, 221, 221, 0.89);
 }
 .header-tabela{
 color: rgba(221, 221, 221, 0.89) !important;
@@ -30,6 +40,7 @@ font-size: 1vw;
 .corpo-tabela {
     color:rgba(221, 221, 221, 0.89);
     text-align: center;
+    font-size: 0.9vw;
 }
 #nome, #nome-header {
     text-align: left;
@@ -38,26 +49,41 @@ font-size: 1vw;
     text-align: right;
 }
 .caixas {
-    height:150px;
+    height:8vw;
     background-color:#eaecef;
-    border-radius: 15px;
-    width:75%;
+    border-radius: 1vw;
+    width:12vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8%;
+    margin-bottom: 1vw;
+    
+}
+.conteudo {
+    margin-top:9vw;
+}
+.header-fixo {
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    position: fixed;
+    background-color: #081633
+}
+.conteudo-caixas {
+    margin-left: 0vw;
 }
 .top4-espaco{
-    border-radius: 15px;
-    width:95%;
-    margin-left: 15px;
+    border-radius: 1vw;
+    width:14.3vw;
+    margin-left: 1vw;
+    background-color: #233042;
 }
 .top4-titulo {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2vw;
-    margin-top: 10%;
+    margin-top: 1.5rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 1rem;
     color:white;
 }
 #nome-top, #valor-top-atual, #h24-top{
@@ -72,36 +98,37 @@ font-size: 1vw;
 }
 #rank-atual{
     text-align: center !important; 
-    padding-top:7%; 
+    padding-top:0.7vw; 
     padding-bottom:auto;
-    margin-right:5%; 
+    margin-right:0.5vw; 
     font-weight: bold;
     color: black;
     font-size: 0.7vw;
     border-left: 1px solid rgba(0, 0, 0, 0.212);
 }
 .navbar {
-    height: 150px;
+    height: 8vw;
 }
 .pesquisa {
-    padding: 6px;
+    padding: 0.3vw;
     font-size: 0.7vw;
     border:none;
-    width:15%;
+    width:12vw;
     background: #f1f1f1;
-    border-radius: 15px;
+    border-radius: 0.7vw;
   }
 .selecionar{
     display: inline-block;
     position: relative;
     color: white;
+    font-size:1.5vw;
   }
   .selecionar:after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 0.1vw;
     bottom: 0;
     left: 0;
     background-color: white;
@@ -121,17 +148,49 @@ font-size: 1vw;
   }
   .caixa-detalhes {
       border:1px solid red;
-      width:85%;
+      width:85vw;
   }
  .espaco-vazio {
-     height:100px;
+     height:4vw;
  }
  .detalhes-grafico {
      background-color: #142749;
+ }
+ .detalhes-grafico row{
+    border:1px solid purple;
  }
  .detalhes-moeda {
      font-size: 2vw;
      justify-content: center;
      color:white;
+ }
+ #logo-detalhes {
+    width: 100vw;
+}
+ #favoritos {
+     width:1.3vw;
+ }
+ #favoritos:hover{
+     
+    transform: scale(1.2);
 
  }
+.favoritos-add {
+    animation-name: animacao-estrela-add;
+    animation-duration: 0.7s;
+}
+.favoritos-rem {
+    animation-name: animacao-estrela-rem;
+    animation-duration: 0.3s;
+}
+
+ @keyframes animacao-estrela-add {
+    0%   {width:1.3vw;}
+    50%  {width:1.6vw;}
+    100% {width:1.3vw;}
+  }
+  @keyframes animacao-estrela-rem {
+    0%   {width:1.3vw;}
+    50%  {width:1vw;}
+    100% {width:1.3vw;}
+  }

@@ -37,9 +37,11 @@ function Menu_Detalhes(){
     $('#logo-detalhes').attr('src', coins[id].logo);
     $('#nome-detalhes').text(coins[id].nome);
     $('#abreviatura').text(coins[id].abreviatura);
+
 }
 function CliqueStar(star){
     if(coins[id].fav == false){
+        
         star.attr('src', '../img/starcolor.png');
         coins[id].fav = true;
     } else {

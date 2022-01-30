@@ -28,7 +28,6 @@ $.ajax({
         };
         i++;
     })
-
     mostra_top_4(coins);
     mostra_tabela(100, coins);
 })
@@ -53,6 +52,7 @@ function mostra_tabela(numero){
         else {$('#favoritos', clone[i]).attr('src', "../img/starnocolor.png");}
         $('#tbody').append(clone[i]);
     }
+    
 }
 function mostra_top_4(){
     var cloneCaixa = $('.caixas').clone();
@@ -107,9 +107,13 @@ function redirecionaPaginaDetalhes(id){
 }
 function CliqueStar(id, star){
     if(coins[id].fav == false){
+        star.removeClass('favoritos-rem');
+        star.addClass('favoritos-add');
         star.attr('src', '../img/starcolor.png');
         coins[id].fav = true;
     } else {
+        star.removeClass('favoritos-add');
+        star.addClass('favoritos-rem');
         coins[id].fav = false;
         star.attr('src', '../img/starnocolor.png');
     }
