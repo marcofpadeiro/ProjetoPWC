@@ -12,19 +12,21 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+   <!--HEADER-->
   <nav class="navbar navbar-light" >
     <div class="container-fluid">
       <a href="index.html"><img src="../img/foxwhite.png" class="img-responsive logo"></a>
-      <h2 class="selecionar"><a href="index.html">Top 100</a></h2>
-      <h2 class="selecionar"><a href="">Favoritos</a></h2>
-        <input class="pesquisa" onkeyup="search_coin()" id="pesquisa" type="text" placeholder="Pesquisa.." name="search">
+      <h2 class="selecionar" onclick="redirecionaHomepage()">Homepage</h2>
+      <h2 class="selecionar" onclick="redirecionaPaginaFavoritos()">Favoritos</h2>
+        <input class="pesquisa"  onkeyup="search_coin()" id="pesquisa" type="text" placeholder="Pesquisa.." name="search">
     </div>
   </nav>
+  <!--DETALHES DA MOEDA, LADO ESQUERDO-->
   <div class="container-fluid caixa-detalhes">
-     <div class="row" style="margin-top: 8vh;">
-        <div class="col-3" style="border:8px solid #142749; border-radius: 15px;">
+     <div class="row detalhes-margem">
+        <div class="col-3 esquerda-borda">
          <div class="row centrar">
-          <img id="favoritos" src="../img/starblackwhite.png" onclick="CliqueStar($(this))" style="width:8%;">
+          <img id="favoritos" src="../img/starblackwhite.png" onclick="CliqueStar($(this))" class="estrela-detalhes">
          </div>
          <div class="row espaco-vazio"></div>
          <div class="row centrar">
@@ -36,8 +38,8 @@
          </div>
          <div class="row espaco-vazio"></div>
         </div>
-        <div class="col-1">
-        </div>
+        <div class="col-1"></div>
+        <!--DETALHES DA MOEDA, LADO DIREITO-->
         <div class="col-8 detalhes-grafico">        
           <div class="row h-25 margem-detalhes">
               <div class="col-2 cor-detalhes" id="cor-back">Valor atual<div id="valor-moeda"></div></div>
@@ -46,13 +48,12 @@
           </div>
           <div class="row h-25 margem-detalhes">
             <div class="col cor-detalhes" >Ultimas 24h<div id="h24-moeda"></div></div>
-            <div class="col cor-detalhes">Volume Total<div id="volume-moeda" style="margin-right: 10px;"></div></div>
+            <div class="col cor-detalhes">Volume Total<div id="volume-moeda"></div></div>
             <div class="col cor-detalhes">Market Cap <div id="market-moeda"></div></div>
         </div>
+        <!--GRAFICO-->
         <div class="row h-50" >
-          <div id="chartContainer" class="col" style="margin-left: 4vw;" >
-            
-          </div>
+          <div id="chartContainer" class="col tamanho-grafico" ></div>
         </div>
         </div>
       </div>
@@ -61,6 +62,5 @@
 </body>
 <script src="../js/script_detalhes.js"></script>
 <script src="../js/jquery.canvasjs.min.js"></script>  
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>

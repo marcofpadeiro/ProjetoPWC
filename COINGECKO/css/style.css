@@ -5,20 +5,30 @@
 }
 .tabela-top-100{
     border-radius: 15px;
-    margin-right: 20px;
     border:1px solid rgba(255, 255, 255, 0.116);
     background-color: #142749;
 }
 body{
     background-color: #081633;
 }
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+   color: white;
+}
+a {
+    color:white;
+}
 #logo-coin{
     width: 1vw;
+    user-select: none;
 }
 #logo-coin-top{
     width: 1.5vw;
+    user-select: none;
 }
-#fila {
+.fila {
     line-height: 2.5vw;
     border-top:1px solid rgba(255, 255, 255, 0.100);
 }
@@ -29,12 +39,13 @@ cursor:pointer;
 .theader {
     line-height: 3vw;
     border-bottom:2px solid rgba(221, 221, 221, 0.89);
+    user-select: none;
 }
 .header-tabela{
-color: rgba(221, 221, 221, 0.89) !important;
-text-align: center;
-font-weight: bold;
-font-size: 1vw;
+    color: rgba(221, 221, 221, 0.89) !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
 }
 .corpo-tabela {
     color:rgba(221, 221, 221, 0.89);
@@ -43,6 +54,9 @@ font-size: 1vw;
 }
 #nome, #nome-header {
     text-align: left;
+}
+ #valor-header, #h24-header,#volume-header,#id-header{
+    cursor: pointer;
 }
 #valor, #h24, #market-cap,#valor-header, #h24-header, #market-header,#volume-header,#volume-total {
     text-align: right;
@@ -55,6 +69,11 @@ font-size: 1vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1vw;
+    cursor:pointer;
+}
+.caixas:hover{
+    height:8.5vw;
+    width:12.5vw;
 }
 .conteudo {
     margin-top:9vw;
@@ -89,7 +108,7 @@ font-size: 1vw;
     margin-bottom: auto;
     margin-top: auto;
     font-weight: bold;
-    font-size: 0.66vw;
+    font-size: 0.62vw;
 }
 #valor-top-atual{
     text-align: center;
@@ -120,6 +139,7 @@ font-size: 1vw;
     position: relative;
     color: white;
     font-size:1.5vw;
+    cursor:pointer;
   }
   .selecionar:after {
     content: '';
@@ -137,13 +157,6 @@ font-size: 1vw;
     transform: scaleX(1);
    transform-origin: bottom left;
 }
-  h2 {
-      color:#eaecef;
-  }
-  a:visited, a:hover{
-      text-decoration: none;
-      color: white;
-  }
   .caixa-detalhes {
       width:85vw;
   }
@@ -151,7 +164,7 @@ font-size: 1vw;
      height:4vw;
  }
  .detalhes-grafico {
-         border-radius: 15px;
+     border-radius: 15px;
      background-color: #142749;
  }
 .detalhes-moeda {
@@ -163,9 +176,11 @@ font-size: 1vw;
  #logo-detalhes {
     width: 15vw;
     height: 30vh;
+    user-select: none;
 }
  #favoritos {
      width:1.3vw;
+     user-select: none;
  }
  #favoritos:hover{
     transform: scale(1.2);
@@ -199,7 +214,7 @@ font-size: 1vw;
       border-radius: 5px;
   }
   .margem-detalhes {
-      margin-left: 1vw;
+    margin-left: 3vw;
   }
  .cor-detalhes {
     color:rgb(102, 167, 189);
@@ -263,8 +278,67 @@ font-size: 1vw;
      color:white;
      font-weight: bold;
      cursor:pointer;
+     
+ }
+ #top10, #top100 {
+     font-size: 1vw;
  }
  .nao-focado{
      color:rgb(199, 194, 194);
      cursor:pointer;
  }
+ .barra {
+     color: white;
+ }
+.espaco {
+    font-size: 1vw;
+    display:block;
+    float:left;
+    padding-right: 0.4vw;
+}
+.logo-top {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.caixa-linha {
+    border-top: 1px solid rgba(0, 0, 0, 0.212); 
+    border-bottom-right-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    margin-left: 0vw;
+}
+.detalhes-margem {
+    margin-top: 8vh;
+}
+.esquerda-borda {
+    border:8px solid #142749; 
+    border-radius: 15px;
+}
+.estrela-detalhes {
+    width:8% !important;
+}
+.tamanho-grafico {
+    margin-left: 4vw;
+}
+.apagar {
+    color:white;
+    cursor: pointer;
+    font-size: 0.8vw;
+    text-align: center;
+    width: fit-content;
+    margin-left: 93vw;
+    margin-bottom: 0.5vw;
+}
+.header-coluna {
+    width: 74vw; 
+    margin-left:0px;
+}
+#mensagem {
+   text-align:center; 
+   color:white; 
+   font-weight: bold;
+}
+.tamanho-seta {
+    width:0.5vw;
+    margin:3px;
+}
+

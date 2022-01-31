@@ -1,16 +1,103 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
- </head>
- <body>
-   
+<head>
+  <link rel="icon" type="image/png" href="../img/logonotext.png" >
+  <title>FoxList</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+   <!--HEADER-->
+   <nav class="navbar navbar-light header-fixo" >
+      <div class="container-fluid">
+        <a href="index.html"><img src="../img/foxwhite.png" class="img-responsive logo"></a>
+        <div></div>
+        <div></div>
+        <h2 class="selecionar"><a href="index.html">Homepage</a></h2>
+        <div></div>
+        <div>
+          <div id="top100" class=" focado top100 espaco selecionar"onclick="toggleTop10('top100')">Top 100</div>
+          <div class="barra espaco">|</div>
+          <div id="top10" class=" nao-focado top10 espaco selecionar"onclick="toggleTop10('top10')">Top 10</div>
+        </div>
+        <div> 
+            <div id="euro" class="focado espaco selecionar"onclick="changeCurrency('eur')">Euro (€)</div>
+            <div class="barra espaco">|</div>
+            <div id="usd" class="nao-focado espaco selecionar"onclick="changeCurrency('usd')">Dolar ($)</div>
+        </div>
+          <input class="pesquisa espaco" id="pesquisa" onkeyup="search_coin()" type="text" placeholder="Pesquisa.." name="search">
+      </div>
+    </nav>
+    <!--TOP RAISING-->
+  <div class="container-fluid conteudo">
+    <div class="selecionar apagar" onclick="apagaTodos()">Apagar Todos</div>
+    <div class="row">
+      <div class="col-2"> 
+         <div class="row top4-espaco">
+           <div class="top4-titulo">Top Rising</div>
+           <div class="row top4" >
+             <div class="caixas" >
+               <div class="row w-100 h-50 conteudo-caixas">
+                 <div class="col-2 logo-top"><img id="logo-coin-top"></div> 
+                 <div class="col" id="nome-top"></div>
+                 <div class="col" id="h24-top"></div>
+               </div>
+               <div class="row w-100 h-50 caixa-linha" >
+                 <div class="col" id="valor-top-atual">Valor Atual
+                    <div id="valor-top"></div>
+                 </div>
+                 <div class="col-3" id="rank-atual" >Rank
+                   <div id="ranking-top"></div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <!--TABELA HEADER-->
+      <div class="col">
+        <div class="container-fluid tabela-top-100" >
+        <div id="theader">
+          <div class="row theader" id="header-ordem">
+            <div class="row header-coluna">
+               <div class="col-1 header-tabela" value="1" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="id-header">#<img class="tamanho-seta"src="../img/down.png"></div>
+              <div class="col-sl header-tabela" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div class="col-2 header-tabela" id="nome-header">Nome</div>
+              <div class="col-2 header-tabela" value="4" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="valor-header">Valor atual<img class="tamanho-seta"src="../img/down.png"></div>
+              <div class="col-2 header-tabela" value="6" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="h24-header">Ultimas 24h<img class="tamanho-seta"src="../img/down.png"></div>
+              <div class="col header-tabela" value="8" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="volume-header">Volume Total<img class="tamanho-seta"src="../img/down.png"></div>
+              <div class="col-2 header-tabela" id="market-header">Market Cap</div>
+          </div>
+          </div>
+          <!--TABELA BODY-->
+          <div id="tbody">
+          <div class="row fila" id="fila" value="0">
+            <div class="row header-coluna "onclick="redirecionaPaginaDetalhes($(this).parent().val())">
+               <div class="col-1 corpo-tabela" onclick="redirecionaPaginaDetalhes($(this).parent().val())" id="id"></div>
+               <div class="col-sl corpo-tabela" id="logo-coin-div"><img id="logo-coin"></div>
+               <div class="col-2 corpo-tabela" id="nome"></div>
+               <div class="col-2 corpo-tabela" id="valor"></div>
+               <div class="col-2 corpo-tabela" id="h24"></div>
+               <div class="col corpo-tabela"  id="volume-total"></div>
+               <div class="col-2 corpo-tabela" id="market-cap"></div>
+            </div>
+            <div class="col-1 corpo-tabela" onclick="CliqueStar($(this).parent().val(), $(this).children())"><img id="favoritos" src="../img/starnocolor.png"></div>
+          </div>
+          <div class="row fila" id="fila-mensagem">
+               <div class="col" id="mensagem"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </body>
-<script src="js/script.js"></script>
+<script src="../js/script-fav.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>
