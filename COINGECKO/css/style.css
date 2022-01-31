@@ -15,7 +15,6 @@ body{
 #logo-coin{
     width: 1vw;
 }
-
 #logo-coin-top{
     width: 1.5vw;
 }
@@ -56,7 +55,6 @@ font-size: 1vw;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1vw;
-    
 }
 .conteudo {
     margin-top:9vw;
@@ -91,7 +89,7 @@ font-size: 1vw;
     margin-bottom: auto;
     margin-top: auto;
     font-weight: bold;
-    font-size: 0.7vw;
+    font-size: 0.66vw;
 }
 #valor-top-atual{
     text-align: center;
@@ -147,33 +145,30 @@ font-size: 1vw;
       color: white;
   }
   .caixa-detalhes {
-      border:1px solid red;
       width:85vw;
   }
  .espaco-vazio {
      height:4vw;
  }
  .detalhes-grafico {
+         border-radius: 15px;
      background-color: #142749;
  }
- .detalhes-grafico row{
-    border:1px solid purple;
- }
- .detalhes-moeda {
-     font-size: 2vw;
+.detalhes-moeda {
+     font-size: 1.6vw;
      justify-content: center;
      color:white;
+     margin-top:1vw;
  }
  #logo-detalhes {
-    width: 100vw;
+    width: 15vw;
+    height: 30vh;
 }
  #favoritos {
      width:1.3vw;
  }
  #favoritos:hover{
-     
     transform: scale(1.2);
-
  }
 .favoritos-add {
     animation-name: animacao-estrela-add;
@@ -183,7 +178,6 @@ font-size: 1vw;
     animation-name: animacao-estrela-rem;
     animation-duration: 0.3s;
 }
-
  @keyframes animacao-estrela-add {
     0%   {width:1.3vw;}
     50%  {width:1.6vw;}
@@ -194,3 +188,83 @@ font-size: 1vw;
     50%  {width:1vw;}
     100% {width:1.3vw;}
   }
+ #abreviatura {
+      margin:0.5vw;
+      font-size: 1.1vw;
+      font-weight: bold;
+      color: rgb(123, 196, 221);
+      background-color: rgba(76, 122, 160, 0.219);
+      padding-left: 0.3vw;
+      padding-right: 0.3vw;
+      border-radius: 5px;
+  }
+  .margem-detalhes {
+      margin-left: 1vw;
+  }
+ .cor-detalhes {
+    color:rgb(102, 167, 189);
+     font-weight: bold;
+     font-size: 1.2vw;
+     margin:auto;
+ }
+ .cor-detalhes-rank {
+    color:rgb(102, 167, 189);
+    font-weight: bold;
+    font-size: 1.7vw;
+    margin:auto;
+ }
+ #rank-moeda {
+    margin-left: 1.2vw;
+    color:white;
+    font-weight: bold;
+    font-size:1.5vw;
+ }
+ #h24-moeda {
+     font-weight: normal;
+     font-size:1vw;
+     margin-left: 4vw;
+ }
+ #market-moeda {
+    color:white;
+    font-weight: normal;
+    font-size:0.8vw;
+ }
+ #volume-moeda {
+    color:white;
+    font-weight: normal;
+    font-size:0.8vw;
+ }
+ #valor-moeda{
+     color:white;
+     font-weight: normal;
+     font-size:1vw;
+     margin-left: 0.5vw;
+ }
+ .top1 {
+    background: -webkit-linear-gradient(rgb(250, 243, 185), rgb(255,215,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+ .top2{
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+ .top3{
+    background: -webkit-linear-gradient(rgb(218, 189, 128), #83612e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ }
+ .centrar {
+    justify-content: center;
+    margin-top: 1vw;
+ }
+ .focado{
+     color:white;
+     font-weight: bold;
+     cursor:pointer;
+ }
+ .nao-focado{
+     color:rgb(199, 194, 194);
+     cursor:pointer;
+ }

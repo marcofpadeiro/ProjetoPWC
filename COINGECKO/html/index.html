@@ -17,9 +17,13 @@
       <a href="index.html"><img src="../img/foxwhite.png" class="img-responsive logo"></a>
       <h2></h2>
       <h2></h2>
-      <h2></h2>
+      
       <h2 class="selecionar"><a href="">Favoritos </a></h2>
-        <input class="pesquisa" type="text" placeholder="Pesquisa.." name="search">
+      
+          <div id="euro" style="float:right"class="focado"onclick="changeCurrency('eur')">Euro (€)</div>
+          <div id="usd" style="float:left"class="nao-focado"onclick="changeCurrency('usd')">Dolar ($)</div>
+          
+        <input class="pesquisa" id="pesquisa" onkeyup="search_coin()" type="text" placeholder="Pesquisa.." name="search">
     </div>
   </nav>
   <div class="container-fluid conteudo">
@@ -27,38 +31,38 @@
       <div class="col-2"> 
         <div class="row top4-espaco">
           <div class="top4-titulo">Top Rising</div>
-        <div class="row top4" >
-          <div class="caixas">
-            <div class="row w-100 h-50 conteudo-caixas">
-              <div class="col-2" style="margin-bottom: auto; margin-top: auto;"><img id="logo-coin-top"></div> 
-              <div class="col" id="nome-top"></div>
-              <div class="col" id="h24-top"></div>
-            </div>
-            <div class="row w-100 h-50" style="border-top: 1px solid rgba(0, 0, 0, 0.212); border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; margin-left: 0%;">
-              <div class="col" id="valor-top-atual">Valor Atual
-                <div id="valor-top"></div>
+          <div class="row top4" >
+            <div class="caixas">
+              <div class="row w-100 h-50 conteudo-caixas">
+                <div class="col-2" style="margin-bottom: auto; margin-top: auto;"><img id="logo-coin-top"></div> 
+                <div class="col" id="nome-top"></div>
+                <div class="col" id="h24-top"></div>
               </div>
-              <div class="col-3" id="rank-atual" >
-                Rank
-                <div id="ranking-top"></div>
+              <div class="row w-100 h-50" style="border-top: 1px solid rgba(0, 0, 0, 0.212); border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; margin-left: 0%;">
+                <div class="col" id="valor-top-atual">Valor Atual
+                  <div id="valor-top"></div>
+                </div>
+                <div class="col-3" id="rank-atual" >
+                  Rank
+                  <div id="ranking-top"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
       <div class="col">
         <div class="container-fluid tabela-top-100" >
         <div id="theader">
-          <div class="row theader">
-            <div class="col-1 header-tabela">#</div>
-            <div class="col-sl header-tabela">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+          <div class="row theader"  id="header-ordem">
+            <div class="col-1 header-tabela" value="2" onclick="OrdenarTabela($(this), $(this).attr('value'))">#</div>
+            <div class="col-sl header-tabela" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <div class="col-2 header-tabela" id="nome-header">Nome</div>
-            <div class="col-2 header-tabela" id="valor-header">Valor atual</div>
-            <div class="col-2 header-tabela" id="h24-header">Ultimas 24h</div>
-            <div class="col header-tabela" id="volume-header">Volume Total</div>
+            <div class="col-2 header-tabela" value="3" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="valor-header">Valor atual</div>
+            <div class="col-2 header-tabela" value="5" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="h24-header">Ultimas 24h</div>
+            <div class="col header-tabela" value="7" onclick="OrdenarTabela($(this), $(this).attr('value'))" id="volume-header">Volume Total</div>
             <div class="col-2 header-tabela" id="market-header">Market Cap</div>
-            <div class="col-1 header-tabela"></div>
+            <div class="col-1 header-tabela" ><button onclick="toggleTop10()" id="showTop10">Top 10</button></div>
           </div>
           </div>
           <div id="tbody">
